@@ -1,35 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kz</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$pank Tactics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            align-items: center; /* Alinha a imagem e o texto verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        }
+        header h1 {
+            margin: 0;
+            color: #1E90FF;
+            font-size: 36px;
+            margin-left: 10px; /* Espaço entre a imagem e o texto */
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #444; /* Novo background cinza mais escuro */
+            border-radius: 20px;
+            margin-top: 20px; /* Espaço adicional no topo */
+        }
+        h2, p {
+            color: #FFF; /* Cor do texto dentro do container */
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1E90FF;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0077B6;
+        }
+        .tab {
+            display: none;
+            padding: 20px;
+            border: 2px solid #1E90FF;
+            border-radius: 20px;
+            text-align: left;
+            background-color: #444;
+            margin-top: 60px; /* Movido um pouco mais para baixo */
+            font-size: 18px;
+            width: 80%;
+            max-width: 600px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .tab.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="img/logo.png" alt="Logo do servidor" class="logo">
+    <header>
+        <h1>$pank Tactics</h1>
+    </header>
+    <div class="container">
+        <h2>Bem-vindo ao $pank Tactics!</h2>
+        <p>Junte-se a nós para melhorar ou apriomorar seu pvp!</p>
+        <a href="mtasa://149.56.166.240:23613" class="btn">Entrar no Servidor</a>
+        <button class="btn" onclick="toggleTab('regras')">Regras</button>
+        <div id="regras" class="tab">
+            <h3>Regras</h3>
+            <p>Aqui estão algumas regras importantes do servidor:</p>
+            <ul>
+                <li>Respeite todos os jogadores e administradores.</li>
+                <li>Não faça trapaças ou use hacks.</li>
+                <li>Mantenha a linguagem limpa e respeitosa.</li>
+                <li>Não promova discurso de ódio ou comportamento tóxico.</li>
+            </ul>
+        </div>
+        <a href="https://discord.gg/a7Ggf4hvEz" target="_blank" class="btn">Contato</a>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="https://discord.gg/a7Ggf4hvEz">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="hero">
-    <h1>Kz</h1>
-    <p>Bem-vindo ao melhor servidor de tatics! @Kz.</p>
-    <div>
-      <img src="img/pank_fundo.png" alt="Logo abaixo" class="logo-abaixo">
-      <button class="button" onclick="openMTA()">Conectar</button>
-    </div>
-  </div>
-  <footer>
-    <p>&copy; 2024 kz</p>
-  </footer>
-  <script src="scripts.js"></script>
+    <script>
+        function toggleTab(tabName) {
+            var tab = document.getElementById(tabName);
+            if (tab.classList.contains('active')) {
+                tab.classList.remove('active');
+            } else {
+                tab.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
